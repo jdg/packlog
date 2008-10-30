@@ -1,0 +1,42 @@
+h2. Intro
+
+I'll be the first to admit this code sucks.  There is huge room for improvement, but this was meant to be a quick learning
+experience.  It was about shipping another app that filled a simple need.  I didn't plan on sharing it, but I've seen a lot
+over the last few days that has made me rethink that decision.
+
+One of the most awesome parts about the Ruby community is the culture of code sharing.  I want to see the same happen with the
+iPhone community, and now is the time to start giving.  All of the code in this project is based on ideas, patterns and snippets
+that I've found during several late nights.
+
+Please feel free to reuse any code or ideas.  Just don't be a jackass and submit your own copy of PackLog to the app store.  :)
+
+
+h2. A few highlights:
+
+* Custom UITableViewCells built using IB.
+* TouchXML usage (http://code.google.com/p/touchcode/).
+* SQLitePersistentObject usage (http://code.google.com/p/sqlitepersistentobjects/) (incomplete).
+* Custom URI schemes.
+* Editable UITableViewCells.
+
+
+h2. Custom URI scheme notes:
+
+Rather than having the user type out their "big huge" Backpack API token, it was easier to have them copy/paste it onto a webpage,
+which would generate a link they could e-mail themselves to follow.
+
+All was right in the world, until the realization that Mail.app on the iPhone won't make custom URIs clickable.  Whoops.
+Instead, we have the user e-mail an http:// link, which is a simple PHP script that redirects MobileSafari to a 
+custom URI (packlog://).
+
+The packlog:// URI is packlog://subdomain:apiToken@backpack
+
+
+h2. Outro
+
+Enjoy the code?  Show me some love and follow me:
+ on Twitter: http://twitter.com/jdg
+ my blog: http://jdg.net
+ on github: http://github.com/jdg
+
+Or buy a few of my apps: http://appremix.com
